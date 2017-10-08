@@ -70,10 +70,22 @@ git cat-file
 Used to view the type of an object through the SHA-1 value. Example: git cat-file -t e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 blob
 
 git grep
-Lets you search through your trees of content for words and phrases. Example: git grep "www.siteground.com" -- *.php
+Lets you search through your trees of content for words and phrases. Example: git grep "www.example.com" -- *.php
 
 git diff
 Generates patch files or statistics of differences between paths or files in your git repository, or your index or your working directory. Example: git diff
 
 gitk
 Graphical Tcl/Tk based interface to a local Git repository. Example: gitk
+
+git archive
+Creates a tar or zip file including the contents of a single tree from your repository. Example: git archive --format=zip master^ README >file.zip
+
+git gc
+Garbage collector for your repository. Optimizes your repository. Should be run occasionally. Example: git gc Counting objects: 7, done. Delta compression using up to 2 threads. Compressing objects: 100% (5/5), done. Writing objects: 100% (7/7), done. Total 7 (delta 1), reused 0 (delta 0)
+
+git fsck
+Does an integrity check of the Git file system, identifying corrupted objects. Example: git fsck
+
+git prune
+Removes objects that are no longer pointed to by any object in any reachable branch. Example: git prune
